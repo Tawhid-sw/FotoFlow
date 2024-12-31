@@ -4,9 +4,12 @@ import "animate.css";
 import "./index.css";
 import { RouterProvider } from "react-router";
 import { router } from "./routes/router";
+import { DataProvider } from "./global/GlobalContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <DataProvider>
+      <RouterProvider router={router} />
+    </DataProvider>
   </StrictMode>
 );
